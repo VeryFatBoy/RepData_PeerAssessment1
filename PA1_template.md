@@ -109,7 +109,7 @@ head(plot1)
 ## 6 2012-10-07       11015
 ```
 
-Now, let's make a histogram of the total number of steps taken each day.
+Now, let's make a histogram of the total number of steps taken each day. We will use a breaks size of 35 to see the spread of the data.
 
 
 ```r
@@ -214,7 +214,7 @@ summary(activity_data$steps)["NA's"]
 ## 2304
 ```
 
-Now, we need to devise a strategy for filling in all of the missing values in the dataset. So, we will replace the NAs with interval averages. We will also create a new dataset that is equal to the original dataset, but with the missing data filled-in.
+Now, we need to devise a strategy for filling in all of the missing values in the dataset. So, we will replace the NAs with interval averages, calculated in the previous section. We will also create a new dataset that is equal to the original dataset, but with the missing data filled-in.
 
 
 ```r
@@ -245,7 +245,7 @@ head(plot3)
 ## 6 2012-10-06 15420.0000000
 ```
 
-Next, we will make a histogram of the total number of steps taken each day.
+Next, we will make a histogram of the total number of steps taken each day. We will use a breaks size of 35 to see the spread of the data.
 
 
 ```r

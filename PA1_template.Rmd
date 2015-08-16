@@ -57,7 +57,7 @@ plot1 <- ddply(complete_cases, .(date), summarize, total_steps = sum(steps))
 head(plot1)
 ```
 
-Now, let's make a histogram of the total number of steps taken each day.
+Now, let's make a histogram of the total number of steps taken each day. We will use a breaks size of 35 to see the spread of the data.
 
 ```{r plot1, echo = TRUE, eval = TRUE}
 # Create a histogram of the total number of steps taken each day
@@ -120,7 +120,7 @@ First, let's calculate and report the total number of missing values in the data
 summary(activity_data$steps)["NA's"]
 ```
 
-Now, we need to devise a strategy for filling in all of the missing values in the dataset. So, we will replace the NAs with interval averages. We will also create a new dataset that is equal to the original dataset, but with the missing data filled-in.
+Now, we need to devise a strategy for filling in all of the missing values in the dataset. So, we will replace the NAs with interval averages, calculated in the previous section. We will also create a new dataset that is equal to the original dataset, but with the missing data filled-in.
 
 ```{r, echo = TRUE, eval = TRUE}
 # Replace NAs with interval averages
@@ -139,7 +139,7 @@ plot3 <- ddply(new_activity_data, .(date), summarize, total_steps = sum(steps))
 head(plot3)
 ```
 
-Next, we will make a histogram of the total number of steps taken each day.
+Next, we will make a histogram of the total number of steps taken each day. We will use a breaks size of 35 to see the spread of the data.
 
 ```{r plot3, echo = TRUE, eval = TRUE}
 # Create a histogram of the total number of steps taken each day
